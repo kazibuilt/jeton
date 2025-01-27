@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=2, viewport-fit=cover, minimal-ui"
+    />
+
+    <script>
+      ;(function (d) {
+        //quick cookie checker
+        function C(k) {
+          return (d.cookie.match('(^|; )' + k + '=([^;]*)') || 0)[2]
+        }
+
+        var ua = navigator.userAgent, //get the user agent string
+          ismobile = / mobile/i.test(ua), //android and firefox mobile both use android in their UA, and both remove it from the UA in their "pretend desktop mode"
+          mgecko = !!(/ gecko/i.test(ua) && / firefox\//i.test(ua)), //test for firefox
+          wasmobile = C('wasmobile') === 'was', //save the fact that the browser once claimed to be mobile
+          desktopvp = 'user-scalable=yes, maximum-scale=2',
+          el
+
+        if (ismobile && !wasmobile) {
+          d.cookie = 'wasmobile=was' //if the browser claims to be mobile and doesn't yet have a session cookie saying so, set it
+        } else if (!ismobile && wasmobile) {
+          //if the browser once claimed to be mobile but has stopped doing so, change the viewport tag to allow scaling and then to max out at whatever makes sense for your site (could use an ideal max-width if there is one)
+          if (mgecko) {
+            el = d.createElement('meta')
+            el.setAttribute('content', desktopvp)
+            el.setAttribute('name', 'viewport')
+            d.getElementsByTagName('head')[0].appendChild(el)
+          } else {
+            d.getElementsByName('viewport')[0].setAttribute('content', desktopvp) //if not Gecko, we can just update the value directly
+          }
+        }
+      })(document)
+    </script>
+
+    <meta name="theme-color" content="#131E3D" />
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon/android-icon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="/favicon/manifest.json" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=Promise" nomodule></script>
+
+    <title>Jeton</title>
+    <script type="module" crossorigin src="/assets/index-BwpoM-ff.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CwEsUpL5.css">
+  </head>
+
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="jeton-app"></div>
+  </body>
+</html>

@@ -1,0 +1,66 @@
+# *
+User-agent: *
+Disallow: /verificationofemployment
+Disallow: /static_files/deletion_request.pdf
+Disallow: /static/gla/
+Disallow: /invite/
+
+# GPTBot
+User-agent: GPTBot
+Disallow: /
+
+# ChatGPT-User
+User-agent: ChatGPT-User
+Disallow: /
+
+# FacebookBot
+User-agent: FacebookBot
+Disallow: /
+
+# Google-Extended
+User-agent: Google-Extended
+Disallow: /
+
+# OmigiliBot
+User-agent: OmigiliBot
+Disallow: /
+
+# CCBot
+User-agent: CCBot
+Disallow: /
+
+# anthropic-ai
+User-agent: anthropic-ai
+Disallow: /
+
+# Applebot-Extended
+User-agent: Applebot-Extended
+Disallow: /
+
+# ClaudeBot
+User-agent: ClaudeBot
+Disallow: /
+
+# PerplexityBot
+User-agent: PerplexityBot
+Disallow: /
+
+# Bytespider
+User-agent: Bytespider
+Disallow: /
+
+# Host
+Host: https://www.snapchat.com
+
+# Sitemaps
+Sitemap: https://www.snapchat.com/sitemap.xml
+Sitemap: https://www.snapchat.com/spotlight/sitemap.xml
+Sitemap: https://www.snapchat.com/explore/sitemap.xml
+Sitemap: https://www.snapchat.com/lens/sitemap.xml
+Sitemap: https://www.snapchat.com/add/sitemap.xml
+Sitemap: https://www.snapchat.com/p/sitemap.xml
+Sitemap: https://static.snapchat.com/sitemaps/place/sitemap-index.xml
+Sitemap: https://static.snapchat.com/sitemaps/explore/sitemap-index.xml
+Sitemap: https://static.snapchat.com/sitemaps/add/sitemap-index.xml
+Sitemap: https://static.snapchat.com/sitemaps/p/sitemap-index.xml
+Sitemap: https://static.snapchat.com/sitemaps/spotlight/sitemap-index.xml

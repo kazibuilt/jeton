@@ -1,0 +1,14 @@
+User-Agent: *
+Disallow: /abuse_reports/new
+Disallow: /*?*
+Disallow: /app/
+
+User-Agent: ia_archiver
+Allow: /$
+Disallow: /
+
+User-Agent: CCBot
+Disallow: /
+
+Host: https://calendly.com
+Sitemap: https://calendly.com/marketing-site/sitemap.xml

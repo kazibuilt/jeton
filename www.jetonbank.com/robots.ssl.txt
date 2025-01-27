@@ -1,0 +1,7 @@
+User-Agent: *
+Allow: /
+Disallow: /portal
+Disallow: /sandbox
+Disallow: /demo
+Disallow: /doc
+Sitemap: https://www.jetonbank.com/sitemap.xml
