@@ -1,0 +1,1 @@
+._brand-kit-media img{width:100%}._brand-kit-media .colors.grid{grid-template-columns:repeat(3,minmax(0,1fr))}@media only screen and (max-width:1023px){._brand-kit-media .colors.grid{grid-template-columns:repeat(2,minmax(0,1fr))}._brand-kit-media .colors.grid>:first-child{grid-column:1/span 2}}
